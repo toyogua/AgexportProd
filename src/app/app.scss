@@ -1,0 +1,125 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b4b4b4;
+}
+.spinnerA {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+  body{
+    padding-top: constant(safe-area-inset-top);//for iOS 11.2
+    padding-top: env(safe-area-inset-top);//for iOS 11.1
+}
+.toast-danger {
+  .toast-wrapper {
+    background-color: #CD162C;
+    margin-left: 0.65rem !important; 
+    margin-right: 0.65rem !important; 
+    }
+}
+.toast-nice {
+  .toast-wrapper {  
+  background-color: #5A972E;
+  margin-left: 0.65rem !important; 
+  margin-right: 0.65rem !important; 
+    }
+    
+}
+.toast-warning {
+  .toast-wrapper {  
+  background-color: #ffcc16;
+  margin-left: 0.65rem !important; 
+  margin-right: 0.65rem !important; 
+    }
+    
+}
+.toast-info {
+  .toast-wrapper {  
+  background-color: #1966A8;
+  margin-left: 0.65rem !important; 
+  margin-right: 0.65rem !important; 
+    }
+    
+}
+.toast-dark {
+  .toast-wrapper {  
+  background-color: #3B3B3F;
+  margin-left: 0.65rem !important; 
+  margin-right: 0.65rem !important; 
+    }
+    
+}
+.toast-light {
+  .toast-wrapper {  
+  background-color: #f4f4f4;
+  margin-left: 0.65rem !important; 
+  margin-right: 0.65rem !important; 
+    }
+    
+}

@@ -1,0 +1,167 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+      <ion-title>
+          <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+      </ion-title>
+      <ion-buttons end>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+    
+  </ion-header>
+
+  <ion-content no-padding>
+      <ion-item>
+            <ion-segment [(ngModel)]="selectedSegment" (ionChange)="onSegmentChanged($event)" color="dark">
+                    <ion-segment-button value="Publico">
+                      Institucional
+                    </ion-segment-button>
+                    <ion-segment-button value="Privado">
+                      Sectorial
+                    </ion-segment-button>
+                    <ion-segment-button value="Escuela">
+                      Escuela  
+                    </ion-segment-button>
+                  </ion-segment>
+      </ion-item>
+
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher>
+        <ion-list *ngIf="showPublic" no-padding>
+            <ion-item-sliding *ngFor="let event of publicEvents">
+              <ion-item text-wrap detail-push>
+                <ion-thumbnail item-left (click)="openEvent(event)" class="eventLogo" >
+                  <img src="{{event.images[0].url}}" >
+                </ion-thumbnail>
+                <ion-col (click)="openEvent(event)" no-padding >
+                        <h2><ion-icon name="calendar"></ion-icon>  {{event.subject}}</h2>
+                        <p><ion-icon name="calendar"></ion-icon>  {{event.datetrx}}</p>
+                        <p><ion-icon name="pricetag"></ion-icon>  {{event.cost_type}}</p>
+                        <p><ion-icon name="pin"></ion-icon>  {{event.location}}</p>
+                </ion-col>
+                  <ion-row *ngIf="role=='Agexport'">
+                      <button ion-button block color="detail" icon-end (click)="scanQR(event.activity_code)">
+                        Registrar
+                        <ion-icon name="qr-scanner"></ion-icon>
+                      </button>
+                  </ion-row>
+                    <ion-row *ngIf="(event.confirmation=='No Confirmado' || event.confirmation=='Por Confirmar')&& role=='Regular'">
+                        <button *ngIf="event.replaceConfirmation==false" ion-button block color="secondary" outline icon-end (click)="updateConfirmationL(event)" >{{event.confirmation}}
+                            <ion-icon name="contrast"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="event.replaceConfirmation==true && role=='Regular'" >
+                        <button  ion-button block [color]="event.actionConfirmation.color" [outline]="event.actionConfirmation.style" 
+                                 icon-end (click)="dynamicAction(event.actionConfirmation)">{{event.actionConfirmation.value}}
+                            <ion-icon [name]="event.actionConfirmation.icon"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="event.confirmation=='Confirmado' && role=='Regular'">
+                        <button *ngIf="event.replaceConfirmation==false" ion-button block color="dark" icon-end (click)="updateConfirmationL(event)">{{event.confirmation}}
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="event.confirmation=='No Asistire' && role=='Regular'">
+                        <button *ngIf="event.replaceConfirmation==false" ion-button block color="danger" outline icon-end (click)="updateConfirmationL(event)">{{event.confirmation}}
+                            <ion-icon name="close-circle"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="role=='Regular'">
+                        <button ion-button block color="secondary" icon-end (click)="openLocation(event.latitude, event.longitude)">
+                          Llevarme
+                          <ion-icon name="navigate"></ion-icon>
+                        </button>
+                  </ion-row>
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>
+        <ion-list *ngIf="showSector">
+            <ion-item-sliding *ngFor="let event of privateEvents">
+              <ion-item text-wrap detail-push>
+                <ion-thumbnail item-left  (click)="openEvent(event)" class="eventLogo" >
+                  <img src="{{event.images[0].url}}">
+                </ion-thumbnail> 
+                <ion-col (click)="openEvent(event)" no-padding  >
+                  <h2><ion-icon name="calendar"></ion-icon>  {{event.subject}}</h2>
+                  <p><ion-icon name="calendar"></ion-icon>  {{event.datetrx}}</p>
+                  <p><ion-icon name="pricetag"></ion-icon>  {{event.cost_type}}</p>
+                  <p><ion-icon name="pin"></ion-icon>  {{event.location}}</p>
+                </ion-col>
+                  <ion-row *ngIf="role=='Agexport'">
+                      <button ion-button block color="detail" icon-end (click)="scanQR(event.activity_code)">
+                        Registrar
+                        <ion-icon name="qr-scanner"></ion-icon>
+                      </button>
+                  </ion-row>
+                  <ion-row *ngIf="event.replaceConfirmation==true && role=='Regular'" >
+                    <button  ion-button block [color]="event.actionConfirmation.color" [outline]="event.actionConfirmation.style" 
+                             icon-end (click)="dynamicAction(event.actionConfirmation)">{{event.actionConfirmation.value}}
+                        <ion-icon [name]="event.actionConfirmation.icon"></ion-icon>
+                    </button>
+                </ion-row>
+                  <ion-row *ngIf="event.confirmation=='No Confirmado' && role=='Regular'">
+                        <button *ngIf="event.replaceConfirmation==false" ion-button block color="secondary" outline icon-end (click)="updateConfirmationL(event)">{{event.confirmation}}
+                            <ion-icon name="contrast"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="event.confirmation=='Confirmado' && role=='Regular'">
+                        <button *ngIf="event.replaceConfirmation==false" ion-button block color="dark" icon-end (click)="updateConfirmationL(event)">{{event.confirmation}}
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="event.confirmation=='No Asistire' && role=='Regular'">
+                        <button *ngIf="event.replaceConfirmation==false" ion-button block color="danger" outline icon-end (click)="updateConfirmationL(event)">{{event.confirmation}}
+                            <ion-icon name="close-circle"></ion-icon>
+                        </button>
+                    </ion-row>
+                    <ion-row *ngIf="role=='Regular'">
+                        <button ion-button block color="secondary" icon-end (click)="openLocation(event.latitude, event.longitude)">
+                          Llevarme
+                          <ion-icon name="navigate"></ion-icon>
+                        </button>
+                  </ion-row>
+                  
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>
+
+        <ion-list *ngIf="showSchool">
+            <ion-item-sliding *ngFor="let event of schoolEvents">
+              <ion-item text-wrap detail-push>
+                <ion-thumbnail item-left  (click)="openEvent(event)" class="eventLogo" >
+                  <img src="{{event.images[0].url}}">
+                </ion-thumbnail> 
+                <ion-col (click)="openEvent(event)" no-padding  >
+                  <h2><ion-icon name="calendar"></ion-icon>  {{event.subject}}</h2>
+                  <p><ion-icon name="calendar"></ion-icon>  {{event.datetrx}}</p>
+                  <p><ion-icon name="pricetag"></ion-icon>  {{event.tags}}</p>
+                  <p><ion-icon name="pin"></ion-icon>  {{event.location}}</p>
+                </ion-col>
+                  <ion-row *ngIf="role=='Agexport'">
+                      <button ion-button block color="detail" icon-end (click)="scanQR(event.activity_code)">
+                        Registrar
+                        <ion-icon name="qr-scanner"></ion-icon>
+                      </button>
+                  </ion-row>
+                  <ion-row *ngIf="event.replaceConfirmation==true && role=='Regular'" >
+                    <button  ion-button block [color]="event.actionConfirmation.color" [outline]="event.actionConfirmation.style" 
+                             icon-end (click)="dynamicAction(event.actionConfirmation)">{{event.actionConfirmation.value}}
+                        <ion-icon [name]="event.actionConfirmation.icon"></ion-icon>
+                    </button>
+                </ion-row>
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>
+        <ion-fab right bottom *ngIf="role=='Regular'">
+            <button ion-fab color="detail" (click)="scanQRFav()"><ion-icon name="qr-scanner" ></ion-icon></button>
+        </ion-fab>
+   </ion-content>

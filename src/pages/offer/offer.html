@@ -1,0 +1,42 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+      <ion-title>
+          <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+      </ion-title>
+      <ion-buttons end>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+    
+  </ion-header>
+  <ion-content no-padding>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher>
+      <ion-list *ngFor="let offer of offers">
+              <ion-card no-padding>
+                <ion-item text-wrap (click)="openOffer(offer)">
+                  <ion-avatar item-start>
+                    <img src="{{offer.thumbnail}}">
+                  </ion-avatar>
+                  <h2>{{offer.name}}</h2>
+                  <p>{{offer.description}}</p>
+                </ion-item>
+                <img src="{{offer.flyer}}" (click)="openOffer(offer)"> 
+                <ion-row *ngIf="offer.allow_scan=='Y'">
+                  <button ion-button block color="detail" icon-end (click)="scanQR(offer.a001_offer_id)">
+                    Registrar
+                    <ion-icon name="qr-scanner"></ion-icon>
+                  </button>
+                </ion-row>
+              </ion-card>
+        </ion-list>
+  </ion-content>

@@ -1,0 +1,166 @@
+<!--
+  Generated template for the OfferdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+      <ion-title>
+          <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+      </ion-title>
+      <ion-buttons end>
+          <button ion-button (click)="closeModal()">
+              <ion-icon name="close-circle" color="ligth"></ion-icon>
+          </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-card>
+      <ion-item text-wrap>
+          <ion-avatar item-start>
+              <img src="{{offer.thumbnail}}">
+          </ion-avatar>
+          <h2>{{offer.description}}</h2>
+      </ion-item>
+      <img src="{{offer.flyer}}">
+      <ion-card-content>
+          <ion-list text-wrap>
+              <ion-item>
+                  <p><b>Comercio:</b> {{offer.name}}</p>
+                  <p><b>Categoría:</b> {{offer.offer_category}}</p>
+                  <p><b>Descripción:</b> {{offer.observations}}</p>
+                  <p><b>Validez:</b> {{offer.datefrom}} - {{offer.dateto}}</p>
+                  <p><b>Restricciones:</b> {{offer.conditions}}</p>
+                  <p><b>Teléfono:</b> {{offer.contact_phone}}</p>
+              </ion-item>
+          </ion-list>
+      </ion-card-content>
+  </ion-card>
+  <ion-list text-wrap>
+      <ion-fab *ngIf="allowScanner" edge>
+          <button ion-fab color="secondary">
+              <ion-icon name="apps"></ion-icon>
+          </button>
+          <ion-fab-list side="right">
+              <button ion-fab color="secondary" (click)="scanQR()">
+                  <ion-icon name="qr-scanner"></ion-icon>
+              </button>
+              <button ion-fab color="secondary">
+                  <ion-icon name="speedometer"></ion-icon>
+              </button>
+              <button ion-fab color="secondary">
+                  <ion-icon name="grid"></ion-icon>
+              </button>
+          </ion-fab-list>
+      </ion-fab>
+
+      <ion-card>
+          <ion-row *ngIf="external">
+              <ion-col col-5></ion-col>
+              <ion-col col-6>
+                  <button ion-button color="secondary" (click)="openLink(offer.external_url)" icon-end block>
+                      Enlace Externo
+                      <ion-icon name="arrow-forward"></ion-icon>
+                  </button>
+              </ion-col>
+              <ion-col col-1></ion-col>
+          </ion-row>
+          <ion-row *ngIf="allowScanner">
+              <ion-col col-5></ion-col>
+              <ion-col col-6>
+                  <button ion-button color="secondary" (click)="scanQR()" icon-end block>
+                      Registrar
+                      <ion-icon name="qr-scanner"></ion-icon>
+                  </button>
+              </ion-col>
+              <ion-col col-1></ion-col>
+          </ion-row>
+
+      </ion-card>
+  </ion-list>
+</ion-content>
+<!--
+Generated template for the OfferdetailPage page.
+
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+      <ion-title>
+          <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+      </ion-title>
+      <ion-buttons end>
+          <button ion-button (click)="closeModal()">
+              <ion-icon name="close-circle" color="ligth"></ion-icon>
+          </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-card>
+      <ion-item text-wrap>
+          <ion-avatar item-start>
+              <img src="{{offer.thumbnail}}">
+          </ion-avatar>
+          <h2>{{offer.description}}</h2>
+      </ion-item>
+      <img src="{{offer.flyer}}">
+          <ion-list text-wrap no-padding>
+                <ion-fab *ngIf="allowScanner" edge>
+                  <button ion-fab color="detail">
+                      <ion-icon name="apps"></ion-icon>
+                  </button>
+                  <ion-fab-list side="right">
+                      <button ion-fab color="detail" (click)="scanQR()">
+                          <ion-icon name="qr-scanner"></ion-icon>
+                      </button>
+                      <button ion-fab color="detail">
+                          <ion-icon name="speedometer"></ion-icon>
+                      </button>
+                      <button ion-fab color="detail">
+                          <ion-icon name="grid"></ion-icon>
+                      </button>
+                  </ion-fab-list>
+              </ion-fab>
+              <ion-list-header color="darkGray">
+                <ion-icon name="calendar" item-start></ion-icon>
+                Detalles
+            </ion-list-header>
+              <ion-item>
+                <p><b>Comercio:</b> {{offer.name}}</p>
+                <p><b>Categoría:</b> {{offer.offer_category}}</p>
+                <p><b>Descripción:</b> {{offer.observations}}</p>
+                <p><b>Validez:</b> {{offer.datefrom}} - {{offer.dateto}}</p>
+                <p><b>Restricciones:</b> {{offer.conditions}}</p>
+                <p><b>Teléfono:</b> {{offer.contact_phone}}</p>
+            </ion-item>
+          </ion-list>
+          <ion-row *ngIf="offer.contact_phone!=undefined">
+            <ion-col col-5></ion-col>
+            <ion-col col-6>
+                <button ion-button color="secondary" (click)="callClick(offer.contact_phone)" icon-end block>
+                    Llamar
+                    <ion-icon name="call"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-1></ion-col>
+        </ion-row>
+          <ion-row *ngIf="external">
+              <ion-col col-5></ion-col>
+              <ion-col col-6>
+                  <button ion-button color="secondary" (click)="openLink(offer.external_url)" icon-end block>
+                      Enlace Externo
+                      <ion-icon name="arrow-forward"></ion-icon>
+                  </button>
+              </ion-col>
+              <ion-col col-1></ion-col>
+          </ion-row>
+        </ion-card>
+</ion-content>

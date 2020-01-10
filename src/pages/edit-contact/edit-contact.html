@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>
+            <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">
+            <ion-icon name="close-circle" color="light"></ion-icon>
+          </button>
+          </ion-buttons>
+      </ion-navbar>
+    </ion-header>
+
+<ion-content no-padding>
+    <ion-list inset>
+        <ion-item-group>
+          <ion-item-divider color="light"><h2>Información General</h2></ion-item-divider>
+            <ion-item>
+              <ion-icon name="person" item-start></ion-icon>
+              <ion-label color="dark">Nombre</ion-label>
+              <ion-input text-wrap type="text" readonly [(ngModel)]="editContact.firstname"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="person" item-start></ion-icon>
+                <ion-label color="dark" >Apellido</ion-label>
+                <ion-input text-wrap type="text" readonly [(ngModel)]="editContact.lastname"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="mail" item-start></ion-icon>
+                <ion-label color="dark" >Email</ion-label>
+                <ion-input text-wrap type="text" readonly [(ngModel)]="editContact.email_"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="call" item-start></ion-icon>
+                <ion-label color="dark" >Phone</ion-label>
+                <ion-input type="text" readonly [(ngModel)]="editContact.phone_"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-icon name="person" item-start></ion-icon>
+              <ion-label color="dark" >Genero</ion-label>
+              <ion-select [(ngModel)]="editContact.genere" > 
+                  <ion-option *ngFor="let genere of generes" [value]="genere.value"  text-wrap>{{genere.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-icon name="document" item-start></ion-icon>
+                <ion-label color="dark" >Tipo Documento</ion-label>
+                <ion-select [(ngModel)]="editContact.personal_id_type"> 
+                    <ion-option *ngFor="let docType of docTypes" [value]="docType.name"  text-wrap>{{docType.name}}</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="document" item-start></ion-icon>
+                  <ion-label color="dark" >No Documento</ion-label>
+                  <ion-input type="text" readonly [(ngModel)]="editContact.personal_id"></ion-input>
+              </ion-item>
+          </ion-item-group>
+          <ion-item-group>
+              <ion-item-divider color="light"><h2>Intereses</h2></ion-item-divider>
+                <ion-item>
+                  <ion-label color="dark">Agexport Hoy</ion-label>
+                  <ion-toggle [(ngModel)]="editContact.e_today_" color="secondary"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="dark">Boletines Sectoriales</ion-label>
+                    <ion-toggle [(ngModel)]="editContact.e_sector_" color="secondary"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="dark">Información de Cursos ECE</ion-label>
+                  <ion-toggle [(ngModel)]="editContact.e_ece_" color="secondary"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                  <ion-label text-wrap color="dark">Información Cursos de Competitividad</ion-label>
+                  <ion-toggle [(ngModel)]="editContact.e_competivity_" color="secondary"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="dark">Información de Cursos Vupe</ion-label>
+                  <ion-toggle [(ngModel)]="editContact.e_vupe_" color="secondary"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="dark">Boletines Urgentes</ion-label>
+                  <ion-toggle [(ngModel)]="editContact.e_urgent_" color="secondary"></ion-toggle>
+                </ion-item>
+          </ion-item-group>
+          <button ion-button color="dark" full medium (click)="sendEditContact()">Registrar</button>
+      </ion-list>
+</ion-content>

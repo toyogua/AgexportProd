@@ -1,0 +1,106 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+        <ion-title>
+                <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">
+            <ion-icon name="close-circle" color="light"></ion-icon>
+          </button>
+          </ion-buttons>
+      </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-card>
+        <ion-item text-wrap>
+            <ion-avatar item-start>
+              <img src="{{event.images[0].url}}">
+            </ion-avatar>
+            <h2>{{event.subject}}</h2>
+        </ion-item>
+        <img src="{{event.images[1].url}}"> 
+    </ion-card>
+    <ion-card>
+    <ion-list text-wrap >
+            <ion-fab *ngIf="role=='Agexport'" edge>
+                    <button ion-fab color="detail">
+                        <ion-icon name="apps"></ion-icon>
+                    </button>
+                    <ion-fab-list side="right">
+                      <button ion-fab color="detail" (click)="scanQR()">
+                            <ion-icon name="qr-scanner"></ion-icon>
+                          </button>
+                          <button ion-fab color="detail" (click)="dynamicAction(fixedAction)">
+                                <ion-icon name="speedometer"></ion-icon>
+                          </button>
+                          <button ion-fab color="detail" (click)="dynamicAction(fixedAction1)">
+                            <ion-icon name="grid"></ion-icon>
+                      </button>
+                          <button *ngIf="r_exit" ion-fab color="danger" (click)="scanQRExit()">
+                            <ion-icon name="exit"></ion-icon>
+                      </button>
+                    </ion-fab-list>
+            </ion-fab>
+      <ion-list-header color="darkGray">
+          <ion-icon name="calendar" item-start></ion-icon>
+          Detalles
+      </ion-list-header>
+      <ion-item>
+              <p><b>Evento:</b> {{event.subject}}</p>
+              <p><b>Descripción:</b> {{event.summary}}</p>
+              <p><b>Inicio:</b> {{event.datetrx}}</p>
+              <p><b>Finalización:</b> {{event.datefinish}}</p>
+              <p><b>Lugar:</b> {{event.location}}</p>
+              <p><b>Costo:</b> {{event.cost_type}}</p>
+              <p><b>Tipo:</b> {{event.type}}</p>
+      </ion-item>
+      <ion-list>
+            <ion-item *ngIf="this.event.type!='Escuela'" >
+                    <ion-icon name="checkbox-outline" item-start></ion-icon>
+                    <ion-label>{{asistLabel}}</ion-label>
+                    <ion-toggle [(ngModel)]="assist" color="secondary" (ionChange)="updateConfirmation()"></ion-toggle>
+            </ion-item>
+
+            <button ion-item *ngFor="let action of actionArray" detail-push  (click)="dynamicAction(action)">
+                    <ion-icon name="arrow-dropright-circle" [color]="action.color" item-start></ion-icon>
+                              {{action.value}}
+                         <ion-icon [name]="action.icon" [color]="action.color" item-end></ion-icon>
+              </button> 
+      </ion-list>
+    
+      <ion-list-header  color="darkGray">Contacto
+          <ion-icon name="people" item-start></ion-icon>
+      </ion-list-header>
+      <ion-item> 
+              <p><b>Persona Contacto:</b> {{event.activity_contactname}}</p>
+              <p><b>Correo Contacto:</b> {{event.activity_contactemail}}</p>
+              <p><b>Teléfono Contacto:</b> {{event.activity_contactphone}}</p>
+              <p><b>Puntos Agexport+:</b> {{event.rate}}</p>
+      </ion-item>
+      <ion-item-sliding>
+          <ion-item color="light">
+          <ion-icon name="person" item-start></ion-icon>
+              {{event.activity_contactname}} 
+              <button ion-button item-end><ion-icon name="arrow-back" ></ion-icon></button>
+          </ion-item>
+          <ion-item-options>
+              <button ion-button color="dark" (click)="callClick(event.activity_contactphone)"><ion-icon  name="call"></ion-icon>Llamar</button>
+              <button ion-button color="secondary" (click)="emailClick(event.activity_contactemail)"><ion-icon  name="mail"></ion-icon>Email</button>
+          </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+    <ion-list-header *ngIf="enableAccess==true" color="darkGray">
+            Detalle de Actividades
+            <ion-icon name="list-box" item-start></ion-icon>
+          </ion-list-header>
+    <ion-list *ngIf="enableAccess==true" side="bottom" >
+            <button *ngFor="let access of accessArray" text-wrap ion-item (click)="openEvent(access.detail)" detail-push>
+                <h2>{{access.subject}}</h2>
+                <p>{{access.datetrx}}</p>
+                <ion-icon name="calendar" item-start></ion-icon>
+            </button>
+    </ion-list>
+</ion-card>
+</ion-content>

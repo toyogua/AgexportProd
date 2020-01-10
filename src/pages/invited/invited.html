@@ -1,0 +1,48 @@
+<!--
+  Generated template for the InvitedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      <img width="200" src="assets/imgs/HeaderLogo.png" padding>
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Mis Invitados</h2>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher>
+      <ion-list *ngFor="let contact of contacts">
+          <ion-item-sliding no-padding>
+              <ion-item color="light" (click)="contactEdit(contact.c_contact_id)">
+                <ion-icon name="person" item-start></ion-icon >
+                  <h2>{{contact.firstname1}} {{contact.lastname1}}</h2>
+                  <p>{{contact.type}}</p>
+                  <button ion-button item-end><ion-icon name="arrow-forward" ></ion-icon></button>
+              </ion-item>
+              <ion-item-options>
+                  <button ion-button  color="danger" (click)="delete(contact.c_contact_id)"><ion-icon  name="ios-trash"></ion-icon>Eliminar</button>
+              </ion-item-options>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </ion-item-sliding>
+        </ion-list>
+        <ion-fab center bottom>
+            <button ion-fab color="dark" (click)="newContact()"><ion-icon name="add" ></ion-icon></button>
+          </ion-fab>
+  </ion-content>

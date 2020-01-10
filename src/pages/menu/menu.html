@@ -1,0 +1,41 @@
+<ion-menu [content]="content" side="right" persistent="true" >
+    <ion-header >
+      <ion-toolbar color="menu">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+   
+    <ion-content >
+      <ion-list color="menu">
+        <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" color="darkGray"></ion-icon>
+            {{ p.title }}
+          </button>
+          <!-- 
+          <button ion-item menuClose (click)="openPage(9)">
+            <ion-icon item-start name="cash"></ion-icon>
+            Programa de Beneficios
+          </button>
+          <button ion-item menuClose (click)="openPage(9)">
+            <ion-icon item-start name="star"></ion-icon>
+            Programa de Puntos
+          </button>
+          <button ion-item menuClose (click)="openPage(9)">
+            <ion-icon item-start name="star"></ion-icon>
+            Estado de Puntos
+          </button>
+          <button ion-item menuClose (click)="openPage(9)">
+            <ion-icon item-start name="people"></ion-icon>
+            Mis Invitados
+          </button> -->
+          <button ion-item menuClose (click)="logout()" color="darkGray">
+            <ion-icon item-start name="log-out" color="light"></ion-icon>
+            <p class="light">Cerrar Sesion</p>
+          </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+   
+  <!-- main navigation -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+  

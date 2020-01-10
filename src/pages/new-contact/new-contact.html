@@ -1,0 +1,54 @@
+<ion-header>
+<ion-navbar color="dark">
+    <ion-title>
+      <img width="85" src="assets/imgs/HeaderLogo.png">
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="closeModal()">
+        <ion-icon name="close-circle" color="danger"></ion-icon>
+      </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+    <ion-list inset>
+        <ion-item-group>
+            <ion-item-divider color="light"><h2>Información General</h2></ion-item-divider>
+        <ion-item>
+          <ion-label color="dark">Nombre</ion-label>
+          <ion-input  type="text" required [(ngModel)]="newContact.firstname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark" >Apellido</ion-label>
+            <ion-input type="text" required [(ngModel)]="newContact.lastname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="dark" >Celular</ion-label>
+          <ion-input type="tel" required [(ngModel)]="newContact.phone"></ion-input>
+        </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item-divider color="light"><h2>Información Laboral</h2></ion-item-divider>
+      <ion-item>
+        <ion-label color="dark" >Email</ion-label>
+        <ion-input  type="email" required [(ngModel)]="newContact.email"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+          <ion-label color="dark" >Area</ion-label>
+          <ion-select [(ngModel)]="newContact.area" required>
+              <ion-option *ngFor="let area of areas" [value]="name" >{{area.name}}</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" >Puesto</ion-label>
+        <ion-select [(ngModel)]="newContact.position" required> 
+            <ion-option *ngFor="let position of positions" [value]="name"  text-wrap>{{position.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-item-group>
+    <button ion-button color="dark" full medium (click)="sendNewContact()">Registrar</button>
+      </ion-list>
+     
+</ion-content>
