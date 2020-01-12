@@ -1,15 +1,15 @@
 webpackJsonp([8],{
 
-/***/ 480:
+/***/ 487:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPageModule", function() { return MainPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularx_qrcode__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularx_qrcode__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main__ = __webpack_require__(502);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,19 +41,19 @@ var MainPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 495:
+/***/ 502:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__activate_activate__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__activate_activate__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_device__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__edit_contact_edit_contact__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_barcode_scanner__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_device__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__edit_contact_edit_contact__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_barcode_scanner__ = __webpack_require__(288);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -254,7 +254,7 @@ var MainPage = /** @class */ (function () {
     };
     MainPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-main',template:/*ion-inline-start:"/Users/gcotton/Documents/AgexportPlus/src/pages/main/main.html"*/'<!--\n  Generated template for the MainPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="dark" >\n    <ion-title>\n      <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n    </ion-title>\n    <ion-buttons end>\n        <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n\n<ion-content no-padding>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content\n          pullingIcon="arrow-dropdown"\n          pullingText="Pull to refresh"\n          refreshingSpinner="circles"\n          refreshingText="Refreshing...">\n        </ion-refresher-content>\n      </ion-refresher>\n    \n    <ion-list no-lines no-padding>\n        <ion-item>\n            <h3>USTED ES PARTE DE LOS</h3>\n            <h1>BENEFICIOS EXCLUSIVOS</h1>\n            <h3>DE ASOCIADOS</h3>\n        </ion-item>\n    </ion-list>    \n    <ion-card no-padding> \n      <ion-grid padding>\n        <ion-row>\n          <ion-col col-2></ion-col>\n          <ion-col><qrcode [qrdata]="createdCode" [size]="256" [usesvg]="\'true\'" [level]="\'L\'" [colordark]="\'#404040\'"></qrcode></ion-col>\n          <ion-col col-2></ion-col>\n        </ion-row>\n        <ion-row no-padding>\n            <button ion-item text-wrap (click)="contactEdit()">\n                <ion-icon name="person" item-start color="darkGray"></ion-icon>\n                  {{contact_name}}\n              </button>\n        </ion-row>\n        <ion-row no-padding>\n            <button ion-item text-wrap (click)="partnerEdit()">\n                <ion-icon name="briefcase" item-start color="darkGray"></ion-icon>\n                  {{company_name}}\n              </button>\n        </ion-row>\n        <ion-row *ngIf="role==\'Regular\'">\n          <button ion-item text-wrap (click)="goBalance()" >\n              <ion-icon name="stats" item-start color="darkGray"></ion-icon>\n              Total de Puntos Agexport Plus: {{summary}}\n          </button>\n        </ion-row>\n      </ion-grid>\n    </ion-card>\n    <ion-fab right bottom *ngIf="role==\'Regular\'">\n        <button ion-fab color="detail" (click)="scanQRFav()"><ion-icon name="qr-scanner" ></ion-icon></button>\n    </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/gcotton/Documents/AgexportPlus/src/pages/main/main.html"*/,
+            selector: 'page-main',template:/*ion-inline-start:"D:\Documentos\GitHub\AgexportProd\src\pages\main\main.html"*/'<!--\n\n  Generated template for the MainPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="dark" >\n\n    <ion-title>\n\n      <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n\n\n<ion-content no-padding>\n\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n\n        <ion-refresher-content\n\n          pullingIcon="arrow-dropdown"\n\n          pullingText="Pull to refresh"\n\n          refreshingSpinner="circles"\n\n          refreshingText="Refreshing...">\n\n        </ion-refresher-content>\n\n      </ion-refresher>\n\n    \n\n    <ion-list no-lines no-padding>\n\n        <ion-item>\n\n            <h3>USTED ES PARTE DE LOS</h3>\n\n            <h1>BENEFICIOS EXCLUSIVOS</h1>\n\n            <h3>DE ASOCIADOS</h3>\n\n        </ion-item>\n\n    </ion-list>    \n\n    <ion-card no-padding> \n\n      <ion-grid padding>\n\n        <ion-row>\n\n          <ion-col col-2></ion-col>\n\n          <ion-col><qrcode [qrdata]="createdCode" [size]="256" [usesvg]="\'true\'" [level]="\'L\'" [colordark]="\'#404040\'"></qrcode></ion-col>\n\n          <ion-col col-2></ion-col>\n\n        </ion-row>\n\n        <ion-row no-padding>\n\n            <button ion-item text-wrap (click)="contactEdit()">\n\n                <ion-icon name="person" item-start color="darkGray"></ion-icon>\n\n                  {{contact_name}}\n\n              </button>\n\n        </ion-row>\n\n        <ion-row no-padding>\n\n            <button ion-item text-wrap (click)="partnerEdit()">\n\n                <ion-icon name="briefcase" item-start color="darkGray"></ion-icon>\n\n                  {{company_name}}\n\n              </button>\n\n        </ion-row>\n\n        <ion-row *ngIf="role==\'Regular\'">\n\n          <button ion-item text-wrap (click)="goBalance()" >\n\n              <ion-icon name="stats" item-start color="darkGray"></ion-icon>\n\n              Total de Puntos Agexport Plus: {{summary}}\n\n          </button>\n\n        </ion-row>\n\n      </ion-grid>\n\n    </ion-card>\n\n    <ion-fab right bottom *ngIf="role==\'Regular\'">\n\n        <button ion-fab color="detail" (click)="scanQRFav()"><ion-icon name="qr-scanner" ></ion-icon></button>\n\n    </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Documentos\GitHub\AgexportProd\src\pages\main\main.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
