@@ -1,31 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb549b21-e11f-4be3-b4a6-8cdc7109e51a" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="eb549b21-e11f-4be3-b4a6-8cdc7109e51a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="ProjectId" id="1WBf38xaXDFt1dFpwWj2n9g2mr4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="excluded.www.directory" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -43,10 +69,58 @@
       <workItem from="1578629007144" duration="12000" />
       <workItem from="1578629022818" duration="8000" />
       <workItem from="1578629048465" duration="68000" />
+      <workItem from="1578716806045" duration="62000" />
+      <workItem from="1578718054901" duration="570000" />
+      <workItem from="1579056538926" duration="222000" />
+      <workItem from="1579056795854" duration="251000" />
+      <workItem from="1579057311462" duration="1156000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Notifications" timestamp="1579063984367">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1579063984367" />
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579056912932">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.812@0.23.1440.812" timestamp="1579056912932" />
+    <state x="222" y="0" key="CommitChangelistDialog2" timestamp="1579064070158">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="222" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579064070158" />
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1579064193561">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579064193561" />
+    <state x="396" y="109" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1579064171061">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="396" y="109" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1440.900@0.0.1440.900" timestamp="1579064171061" />
+    <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579058035814">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1579058035814" />
+    <state x="414" y="88" key="git4idea.branch.GitSmartOperationDialog" timestamp="1579064152733">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="414" y="88" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.900@0.0.1440.900" timestamp="1579064152733" />
   </component>
 </project>
