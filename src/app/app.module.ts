@@ -22,6 +22,7 @@ import { NewContactPageModule } from '../pages/new-contact/new-contact.module';
 import { EditContactPageModule } from '../pages/edit-contact/edit-contact.module';
 import { LoginProvider } from '../providers/login/login';
 import { SigninProvider } from '../providers/signin/signin';
+import { ProfileProvider } from '../providers/profile/profile';
 
   
 
@@ -79,7 +80,8 @@ import { SigninProvider } from '../providers/signin/signin';
     BarcodeScanner,
     InAppBrowser,
     LoginProvider,
-    SigninProvider
+    SigninProvider,
+    ProfileProvider
   ]
 })
 export class AppModule {}
