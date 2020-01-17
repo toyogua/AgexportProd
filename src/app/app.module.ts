@@ -20,6 +20,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { HelploginPageModule } from '../pages/helplogin/helplogin.module';
 import { NewContactPageModule } from '../pages/new-contact/new-contact.module';
 import { EditContactPageModule } from '../pages/edit-contact/edit-contact.module';
+import { LoginProvider } from '../providers/login/login';
+import { SigninProvider } from '../providers/signin/signin';
+import { ProfileProvider } from '../providers/profile/profile';
 
   
 
@@ -75,7 +78,10 @@ import { EditContactPageModule } from '../pages/edit-contact/edit-contact.module
     UniqueDeviceID, 
     Device,
     BarcodeScanner,
-    InAppBrowser
+    InAppBrowser,
+    LoginProvider,
+    SigninProvider,
+    ProfileProvider
   ]
 })
 export class AppModule {}

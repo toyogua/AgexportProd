@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 479:
+/***/ 489:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(504);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,15 +38,15 @@ var MenuPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 494:
+/***/ 504:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__activate_activate__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__activate_activate__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -198,7 +198,7 @@ var MenuPage = /** @class */ (function () {
     ], MenuPage.prototype, "nav", void 0);
     MenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-menu',template:/*ion-inline-start:"/Users/gcotton/Documents/AgexportPlus/src/pages/menu/menu.html"*/'<ion-menu [content]="content" side="right" persistent="true" >\n    <ion-header >\n      <ion-toolbar color="menu">\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n   \n    <ion-content >\n      <ion-list color="menu">\n        <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n            <ion-icon item-start [name]="p.icon" color="darkGray"></ion-icon>\n            {{ p.title }}\n          </button>\n          <!-- \n          <button ion-item menuClose (click)="openPage(9)">\n            <ion-icon item-start name="cash"></ion-icon>\n            Programa de Beneficios\n          </button>\n          <button ion-item menuClose (click)="openPage(9)">\n            <ion-icon item-start name="star"></ion-icon>\n            Programa de Puntos\n          </button>\n          <button ion-item menuClose (click)="openPage(9)">\n            <ion-icon item-start name="star"></ion-icon>\n            Estado de Puntos\n          </button>\n          <button ion-item menuClose (click)="openPage(9)">\n            <ion-icon item-start name="people"></ion-icon>\n            Mis Invitados\n          </button> -->\n          <button ion-item menuClose (click)="logout()" color="darkGray">\n            <ion-icon item-start name="log-out" color="light"></ion-icon>\n            <p class="light">Cerrar Sesion</p>\n          </button>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n   \n  <!-- main navigation -->\n  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n  '/*ion-inline-end:"/Users/gcotton/Documents/AgexportPlus/src/pages/menu/menu.html"*/,
+            selector: 'page-menu',template:/*ion-inline-start:"D:\Documentos\GitHub\AgexportProd\src\pages\menu\menu.html"*/'<ion-menu [content]="content" side="right" persistent="true" >\n\n    <ion-header >\n\n      <ion-toolbar color="menu">\n\n        <ion-title>Menu</ion-title>\n\n      </ion-toolbar>\n\n    </ion-header>\n\n   \n\n    <ion-content >\n\n      <ion-list color="menu">\n\n        <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n\n            <ion-icon item-start [name]="p.icon" color="darkGray"></ion-icon>\n\n            {{ p.title }}\n\n          </button>\n\n          <!-- \n\n          <button ion-item menuClose (click)="openPage(9)">\n\n            <ion-icon item-start name="cash"></ion-icon>\n\n            Programa de Beneficios\n\n          </button>\n\n          <button ion-item menuClose (click)="openPage(9)">\n\n            <ion-icon item-start name="star"></ion-icon>\n\n            Programa de Puntos\n\n          </button>\n\n          <button ion-item menuClose (click)="openPage(9)">\n\n            <ion-icon item-start name="star"></ion-icon>\n\n            Estado de Puntos\n\n          </button>\n\n          <button ion-item menuClose (click)="openPage(9)">\n\n            <ion-icon item-start name="people"></ion-icon>\n\n            Mis Invitados\n\n          </button> -->\n\n          <button ion-item menuClose (click)="logout()" color="darkGray">\n\n            <ion-icon item-start name="log-out" color="light"></ion-icon>\n\n            <p class="light">Cerrar Sesion</p>\n\n          </button>\n\n      </ion-list>\n\n    </ion-content>\n\n  </ion-menu>\n\n   \n\n  <!-- main navigation -->\n\n  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n  '/*ion-inline-end:"D:\Documentos\GitHub\AgexportProd\src\pages\menu\menu.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
     ], MenuPage);

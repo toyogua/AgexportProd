@@ -6,15 +6,21 @@
 -->
 <ion-header>
 
-  <ion-navbar color="dark">
-    <ion-title>
-      <img width="85" src="assets/imgs/HeaderLogo.png">
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="dark">
+        <ion-title>
+            <img width="85" src="assets/imgs/HeaderLogo.png">
+        </ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <!--<div *ngIf="!isLogged">-->
+        <login-signin *ngIf="LoginProvider.isLogged"></login-signin>
+    <!--</div>-->
 
+    <div *ngIf="LoginProvider.isLogged">
+        <!-- LLAMAR A DASHBOARD -->
+    </div>
 </ion-content>

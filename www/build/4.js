@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 481:
+/***/ 492:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OfferprogramPageModule", function() { return OfferprogramPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__offerprogram__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__offerprogram__ = __webpack_require__(507);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,13 +38,13 @@ var OfferprogramPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 496:
+/***/ 507:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OfferprogramPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72,7 +72,7 @@ var OfferprogramPage = /** @class */ (function () {
     };
     OfferprogramPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-offerprogram',template:/*ion-inline-start:"/Users/gcotton/Documents/AgexportPlus/src/pages/offerprogram/offerprogram.html"*/'<ion-header>\n\n    <ion-navbar color="dark">\n      <ion-title>\n        <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n      </ion-title>\n      <ion-buttons end>\n          <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        </ion-buttons>\n    </ion-navbar>\n    \n  </ion-header>\n\n\n<ion-content no-padding>\n  <ion-item text-wrap no-lines>\n    <p><strong>AGEXPORT PLUS</strong>, es un programa de beneficios diseñados exclusivamente a los asociados de la institución en la cual podrán gozar de descuentos y ofertas en estabelcimientos de prestigio.</p>\n    <p></p>\n    <p>El programa ofrece tambien la oportunidad de acumular puntos por la compra de diferentes productos y servicios de la institucion los cuales pueden ser canjeados como descuentos en su cuenta por cobrar o su equivalente en otros servicios.</p>\n  </ion-item>\n  <ion-item text-wrap>\n    <ion-icon name="briefcase" item-start color="darkGray"></ion-icon>\n    Accesos VIP a Santos Gastrobar con ofertas exclusivas\n  </ion-item>\n  <ion-item text-wrap>\n    <ion-icon name="create" item-start color="darkGray"></ion-icon>\n    Capacitaciones sin costo\n  </ion-item>\n  <ion-item text-wrap>\n    <ion-icon name="git-compare" item-start color="darkGray"></ion-icon>\n    Aumulacion de puntos\n  </ion-item>\n  <ion-item text-wrap>\n    <ion-icon name="pricetags" item-start color="darkGray"></ion-icon>\n    Ofertas y descuentos en establecimientos afiliados\n  </ion-item>\n  <ion-item text-wrap>\n    <ion-icon name="calendar" item-start color="darkGray"></ion-icon>\n   Calendario de eventos\n  </ion-item>\n  <ion-item text-wrap>\n    <ion-icon name="paper" item-start color="darkGray"></ion-icon>\n   Información Privilegiada\n  </ion-item>\n  <ion-item text-wrap no-lines>\n    <p><strong>Límite de Responsabilidad</strong>: El cumplimiento de toda promoción u oferta es responsabilidad única y exclusivamente de los establecimientos afiliados.</p>\n    <p> </p>\n    <p><strong>* Restricciones aplican, consulte Política de Puntos</strong></p>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/gcotton/Documents/AgexportPlus/src/pages/offerprogram/offerprogram.html"*/,
+            selector: 'page-offerprogram',template:/*ion-inline-start:"D:\Documentos\GitHub\AgexportProd\src\pages\offerprogram\offerprogram.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="dark">\n\n      <ion-title>\n\n        <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n\n      </ion-title>\n\n      <ion-buttons end>\n\n          <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    \n\n  </ion-header>\n\n\n\n\n\n<ion-content no-padding>\n\n  <ion-item text-wrap no-lines>\n\n    <p><strong>AGEXPORT PLUS</strong>, es un programa de beneficios diseñados exclusivamente a los asociados de la institución en la cual podrán gozar de descuentos y ofertas en estabelcimientos de prestigio.</p>\n\n    <p></p>\n\n    <p>El programa ofrece tambien la oportunidad de acumular puntos por la compra de diferentes productos y servicios de la institucion los cuales pueden ser canjeados como descuentos en su cuenta por cobrar o su equivalente en otros servicios.</p>\n\n  </ion-item>\n\n  <ion-item text-wrap>\n\n    <ion-icon name="briefcase" item-start color="darkGray"></ion-icon>\n\n    Accesos VIP a Santos Gastrobar con ofertas exclusivas\n\n  </ion-item>\n\n  <ion-item text-wrap>\n\n    <ion-icon name="create" item-start color="darkGray"></ion-icon>\n\n    Capacitaciones sin costo\n\n  </ion-item>\n\n  <ion-item text-wrap>\n\n    <ion-icon name="git-compare" item-start color="darkGray"></ion-icon>\n\n    Aumulacion de puntos\n\n  </ion-item>\n\n  <ion-item text-wrap>\n\n    <ion-icon name="pricetags" item-start color="darkGray"></ion-icon>\n\n    Ofertas y descuentos en establecimientos afiliados\n\n  </ion-item>\n\n  <ion-item text-wrap>\n\n    <ion-icon name="calendar" item-start color="darkGray"></ion-icon>\n\n   Calendario de eventos\n\n  </ion-item>\n\n  <ion-item text-wrap>\n\n    <ion-icon name="paper" item-start color="darkGray"></ion-icon>\n\n   Información Privilegiada\n\n  </ion-item>\n\n  <ion-item text-wrap no-lines>\n\n    <p><strong>Límite de Responsabilidad</strong>: El cumplimiento de toda promoción u oferta es responsabilidad única y exclusivamente de los establecimientos afiliados.</p>\n\n    <p> </p>\n\n    <p><strong>* Restricciones aplican, consulte Política de Puntos</strong></p>\n\n  </ion-item>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Documentos\GitHub\AgexportProd\src\pages\offerprogram\offerprogram.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], OfferprogramPage);

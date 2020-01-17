@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 484:
+/***/ 490:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OfferPageModule", function() { return OfferPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__offer__ = __webpack_require__(499);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__offer__ = __webpack_require__(505);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,15 +38,15 @@ var OfferPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 499:
+/***/ 505:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OfferPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -157,7 +157,7 @@ var OfferPage = /** @class */ (function () {
     };
     OfferPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-offer',template:/*ion-inline-start:"/Users/gcotton/Documents/AgexportPlus/src/pages/offer/offer.html"*/'<ion-header>\n\n    <ion-navbar color="dark">\n      <ion-title>\n          <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n      </ion-title>\n      <ion-buttons end>\n          <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        </ion-buttons>\n    </ion-navbar>\n    \n  </ion-header>\n  <ion-content no-padding>\n      <ion-refresher (ionRefresh)="doRefresh($event)">\n          <ion-refresher-content\n            pullingIcon="arrow-dropdown"\n            pullingText="Pull to refresh"\n            refreshingSpinner="circles"\n            refreshingText="Refreshing...">\n          </ion-refresher-content>\n        </ion-refresher>\n      <ion-list *ngFor="let offer of offers">\n              <ion-card no-padding>\n                <ion-item text-wrap (click)="openOffer(offer)">\n                  <ion-avatar item-start>\n                    <img src="{{offer.thumbnail}}">\n                  </ion-avatar>\n                  <h2>{{offer.name}}</h2>\n                  <p>{{offer.description}}</p>\n                </ion-item>\n                <img src="{{offer.flyer}}" (click)="openOffer(offer)"> \n                <ion-row *ngIf="offer.allow_scan==\'Y\'">\n                  <button ion-button block color="detail" icon-end (click)="scanQR(offer.a001_offer_id)">\n                    Registrar\n                    <ion-icon name="qr-scanner"></ion-icon>\n                  </button>\n                </ion-row>\n              </ion-card>\n        </ion-list>\n  </ion-content>'/*ion-inline-end:"/Users/gcotton/Documents/AgexportPlus/src/pages/offer/offer.html"*/,
+            selector: 'page-offer',template:/*ion-inline-start:"D:\Documentos\GitHub\AgexportProd\src\pages\offer\offer.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="dark">\n\n      <ion-title>\n\n          <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n\n      </ion-title>\n\n      <ion-buttons end>\n\n          <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    \n\n  </ion-header>\n\n  <ion-content no-padding>\n\n      <ion-refresher (ionRefresh)="doRefresh($event)">\n\n          <ion-refresher-content\n\n            pullingIcon="arrow-dropdown"\n\n            pullingText="Pull to refresh"\n\n            refreshingSpinner="circles"\n\n            refreshingText="Refreshing...">\n\n          </ion-refresher-content>\n\n        </ion-refresher>\n\n      <ion-list *ngFor="let offer of offers">\n\n              <ion-card no-padding>\n\n                <ion-item text-wrap (click)="openOffer(offer)">\n\n                  <ion-avatar item-start>\n\n                    <img src="{{offer.thumbnail}}">\n\n                  </ion-avatar>\n\n                  <h2>{{offer.name}}</h2>\n\n                  <p>{{offer.description}}</p>\n\n                </ion-item>\n\n                <img src="{{offer.flyer}}" (click)="openOffer(offer)"> \n\n                <ion-row *ngIf="offer.allow_scan==\'Y\'">\n\n                  <button ion-button block color="detail" icon-end (click)="scanQR(offer.a001_offer_id)">\n\n                    Registrar\n\n                    <ion-icon name="qr-scanner"></ion-icon>\n\n                  </button>\n\n                </ion-row>\n\n              </ion-card>\n\n        </ion-list>\n\n  </ion-content>'/*ion-inline-end:"D:\Documentos\GitHub\AgexportProd\src\pages\offer\offer.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */],

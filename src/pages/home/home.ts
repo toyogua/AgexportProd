@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { ActivatePage} from '../activate/activate';
+import {LoginProvider} from "../../providers/login/login";
+
 //import { ValidatePage } from '../validate/validate';
 //import { MenuPage } from '../menu/menu';
 
@@ -27,7 +29,8 @@ export class HomePage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public storage: Storage,
-    private loadingCtrl: LoadingController ) {
+    private loadingCtrl: LoadingController,
+    private LoginProvider: LoginProvider) {
   }
 
   ionViewDidEnter() {
@@ -35,7 +38,7 @@ export class HomePage {
     this.storage.get('success').then((val)=>{
       if (!val){
         console.log("Start new session");
-        this.navCtrl.push(this.activate); 
+        // [JR] this.navCtrl.push(this.activate);
       } else {
         console.log("Session already exists");
         this.storage.get('session').then((val1)=>{
