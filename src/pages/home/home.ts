@@ -31,6 +31,8 @@ export class HomePage {
     public storage: Storage,
     private loadingCtrl: LoadingController,
     private LoginProvider: LoginProvider) {
+
+    this.navCtrl.push('ChatRoomPage')
   }
 
   ionViewDidEnter() {

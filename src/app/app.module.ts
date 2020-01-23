@@ -23,7 +23,8 @@ import { EditContactPageModule } from '../pages/edit-contact/edit-contact.module
 import { LoginProvider } from '../providers/login/login';
 import { SigninProvider } from '../providers/signin/signin';
 import { ProfileProvider } from '../providers/profile/profile';
-
+import {SocketIoModule, SocketIoConfig} from "ng-socket-io";
+const config: SocketIoConfig = { url:'http://localhost:3001', options:{}} ;
   
 
 
@@ -53,7 +54,8 @@ import { ProfileProvider } from '../providers/profile/profile';
     ValidatePageModule,
     HelploginPageModule,
     NewContactPageModule,
-    EditContactPageModule
+    EditContactPageModule,
+      SocketIoModule.forRoot(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

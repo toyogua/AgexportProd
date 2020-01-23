@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 496:
+/***/ 551:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StardetailPageModule", function() { return StardetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stardetail__ = __webpack_require__(511);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stardetail__ = __webpack_require__(567);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,7 +22,7 @@ var StardetailPageModule = /** @class */ (function () {
     function StardetailPageModule() {
     }
     StardetailPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__stardetail__["a" /* StardetailPage */],
             ],
@@ -38,16 +38,16 @@ var StardetailPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 511:
+/***/ 567:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StardetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -297,7 +297,7 @@ var StardetailPage = /** @class */ (function () {
         toast.present();
     };
     StardetailPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-stardetail',template:/*ion-inline-start:"D:\Documentos\GitHub\AgexportProd\src\pages\stardetail\stardetail.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="dark">\n\n        <ion-title>\n\n                <img width="200" src="assets/imgs/HeaderLogo.png" padding>\n\n        </ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button (click)="closeModal()">\n\n            <ion-icon name="close-circle" color="light"></ion-icon>\n\n          </button>\n\n          </ion-buttons>\n\n      </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content no-padding>\n\n    <ion-card>\n\n        <ion-item text-wrap>\n\n            <ion-avatar item-start>\n\n              <img src="{{event.images[0].url}}">\n\n            </ion-avatar>\n\n            <h2>{{event.subject}}</h2>\n\n        </ion-item>\n\n        <img src="{{event.images[1].url}}"> \n\n    </ion-card>\n\n    <ion-card>\n\n    <ion-list text-wrap >\n\n            <ion-fab *ngIf="role==\'Agexport\'" edge>\n\n                    <button ion-fab color="detail">\n\n                        <ion-icon name="apps"></ion-icon>\n\n                    </button>\n\n                    <ion-fab-list side="right">\n\n                      <button ion-fab color="detail" (click)="scanQR()">\n\n                            <ion-icon name="qr-scanner"></ion-icon>\n\n                          </button>\n\n                          <button ion-fab color="detail" (click)="dynamicAction(fixedAction)">\n\n                                <ion-icon name="speedometer"></ion-icon>\n\n                          </button>\n\n                          <button ion-fab color="detail" (click)="dynamicAction(fixedAction1)">\n\n                            <ion-icon name="grid"></ion-icon>\n\n                      </button>\n\n                          <button *ngIf="r_exit" ion-fab color="danger" (click)="scanQRExit()">\n\n                            <ion-icon name="exit"></ion-icon>\n\n                      </button>\n\n                    </ion-fab-list>\n\n            </ion-fab>\n\n      <ion-list-header color="darkGray">\n\n          <ion-icon name="calendar" item-start></ion-icon>\n\n          Detalles\n\n      </ion-list-header>\n\n      <ion-item>\n\n              <p><b>Evento:</b> {{event.subject}}</p>\n\n              <p><b>Descripción:</b> {{event.summary}}</p>\n\n              <p><b>Inicio:</b> {{event.datetrx}}</p>\n\n              <p><b>Finalización:</b> {{event.datefinish}}</p>\n\n              <p><b>Lugar:</b> {{event.location}}</p>\n\n              <p><b>Costo:</b> {{event.cost_type}}</p>\n\n              <p><b>Tipo:</b> {{event.type}}</p>\n\n      </ion-item>\n\n      <ion-list>\n\n            <ion-item *ngIf="this.event.type!=\'Escuela\'" >\n\n                    <ion-icon name="checkbox-outline" item-start></ion-icon>\n\n                    <ion-label>{{asistLabel}}</ion-label>\n\n                    <ion-toggle [(ngModel)]="assist" color="secondary" (ionChange)="updateConfirmation()"></ion-toggle>\n\n            </ion-item>\n\n\n\n            <button ion-item *ngFor="let action of actionArray" detail-push  (click)="dynamicAction(action)">\n\n                    <ion-icon name="arrow-dropright-circle" [color]="action.color" item-start></ion-icon>\n\n                              {{action.value}}\n\n                         <ion-icon [name]="action.icon" [color]="action.color" item-end></ion-icon>\n\n              </button> \n\n      </ion-list>\n\n    \n\n      <ion-list-header  color="darkGray">Contacto\n\n          <ion-icon name="people" item-start></ion-icon>\n\n      </ion-list-header>\n\n      <ion-item> \n\n              <p><b>Persona Contacto:</b> {{event.activity_contactname}}</p>\n\n              <p><b>Correo Contacto:</b> {{event.activity_contactemail}}</p>\n\n              <p><b>Teléfono Contacto:</b> {{event.activity_contactphone}}</p>\n\n              <p><b>Puntos Agexport+:</b> {{event.rate}}</p>\n\n      </ion-item>\n\n      <ion-item-sliding>\n\n          <ion-item color="light">\n\n          <ion-icon name="person" item-start></ion-icon>\n\n              {{event.activity_contactname}} \n\n              <button ion-button item-end><ion-icon name="arrow-back" ></ion-icon></button>\n\n          </ion-item>\n\n          <ion-item-options>\n\n              <button ion-button color="dark" (click)="callClick(event.activity_contactphone)"><ion-icon  name="call"></ion-icon>Llamar</button>\n\n              <button ion-button color="secondary" (click)="emailClick(event.activity_contactemail)"><ion-icon  name="mail"></ion-icon>Email</button>\n\n          </ion-item-options>\n\n        </ion-item-sliding>\n\n    </ion-list>\n\n    <ion-list-header *ngIf="enableAccess==true" color="darkGray">\n\n            Detalle de Actividades\n\n            <ion-icon name="list-box" item-start></ion-icon>\n\n          </ion-list-header>\n\n    <ion-list *ngIf="enableAccess==true" side="bottom" >\n\n            <button *ngFor="let access of accessArray" text-wrap ion-item (click)="openEvent(access.detail)" detail-push>\n\n                <h2>{{access.subject}}</h2>\n\n                <p>{{access.datetrx}}</p>\n\n                <ion-icon name="calendar" item-start></ion-icon>\n\n            </button>\n\n    </ion-list>\n\n</ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Documentos\GitHub\AgexportProd\src\pages\stardetail\stardetail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
